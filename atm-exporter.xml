@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<project>
+    <projectId>10000</projectId>
+    <projectKey>DES</projectKey>
+    <exportDate>2023-11-08 22:12:42 UTC</exportDate>
+    <folders/>
+    <testCases>
+        <testCase id="111583408" key="DES-T1">
+            <attachments/>
+            <confluencePageLinks/>
+            <createdBy>Taisa</createdBy>
+            <createdOn>2023-11-08 21:59:12 UTC</createdOn>
+            <customFields/>
+            <issues/>
+            <labels/>
+            <name><![CDATA[Cliente não logado tenta acessar o pedido]]></name>
+            <objective><![CDATA[redirecionar para tela de login clientes n&atilde;o identificados]]></objective>
+            <owner>70121:9e72b25d-a949-4b59-a9c5-5d40133203cf</owner>
+            <priority><![CDATA[Normal]]></priority>
+            <status><![CDATA[Draft]]></status>
+            <parameters/>
+            <testDataWrapper/>
+            <testScript type="steps">
+                <steps>
+                    <step index="0">
+                        <customFields/>
+                        <description><![CDATA[Acessar no menu o item meus pedidos]]></description>
+                        <expectedResult><![CDATA[listar todos os pedidos por ordem de data decrescente]]></expectedResult>
+                        <testData><![CDATA[id do usu&aacute;rio]]></testData>
+                    </step>
+                    <step index="1">
+                        <customFields/>
+                        <description><![CDATA[Usuario redirecionado para tela de login]]></description>
+                        <expectedResult><![CDATA[visualizar a tela de login]]></expectedResult>
+                        <testData><![CDATA[]]></testData>
+                    </step>
+                    <step index="2">
+                        <customFields/>
+                        <description><![CDATA[Usu&aacute;rio entra com login e senha]]></description>
+                        <expectedResult><![CDATA[redireciona para tela com lista de pedidos&nbsp;]]></expectedResult>
+                        <testData><![CDATA[login e senha]]></testData>
+                    </step>
+                </steps>
+            </testScript>
+        </testCase>
+        <testCase id="111583586" key="DES-T2">
+            <attachments/>
+            <confluencePageLinks/>
+            <createdBy>Taisa</createdBy>
+            <createdOn>2023-11-08 22:06:30 UTC</createdOn>
+            <customFields/>
+            <issues/>
+            <labels/>
+            <name><![CDATA[Cliente logado acessa pedidos]]></name>
+            <owner>70121:9e72b25d-a949-4b59-a9c5-5d40133203cf</owner>
+            <priority><![CDATA[Normal]]></priority>
+            <status><![CDATA[Draft]]></status>
+            <parameters/>
+            <testDataWrapper/>
+            <testScript type="bdd">
+                <details><![CDATA[Given i logged the app
+When i click the item "pedidos"
+Then i should see a page with a list of "pedidos"]]></details>
+            </testScript>
+        </testCase>
+    </testCases>
+</project>
